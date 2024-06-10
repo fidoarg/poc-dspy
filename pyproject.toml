@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "poc-dspy"
+version = "0.0.1"
+description = "Proyecto para aprender sobre el framework dspy"
+authors = ["Fido Aragon <fidoarg@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dspy-ai = "^2.4.9"
+
+
+[tool.poetry.group.explore.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

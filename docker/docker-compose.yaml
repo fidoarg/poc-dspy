@@ -3,14 +3,16 @@ services:
   notebook-env:
     container_name: "notebook-env"
     build:
-      context: "."
-      dockerfile: Dockerfile
+      context: ".."
+      dockerfile: docker/Dockerfile
+    env_file:
+      - "../.env"
     ports:
       - 8888:8888
     volumes:
-      - "./notebooks:/app/notebooks:rw"
-      - "./src:/app/src:rw"
-      - "./data:/app/data:rw"
+      - "../notebooks:/app/notebooks:rw"
+      - "../src:/app/src:rw"
+      - "../data:/app/data:rw"
     networks:
       - poc-dspy-net
 
